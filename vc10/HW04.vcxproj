@@ -47,7 +47,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>..\include;..\..\..\..\..\..\Program Files (x86)\cinder_0.8.4_vc2010\include;..\..\..\..\..\..\Program Files (x86)\cinder_0.8.4_vc2010\boost</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\cinder_0.8.4_vc2010\boost;C:\cinder_0.8.4_vc2010\include;..\include;..\..\..\..\..\..\Program Files (x86)\cinder_0.8.4_vc2010\include;..\..\..\..\..\..\Program Files (x86)\cinder_0.8.4_vc2010\boost</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>true</MinimalRebuild>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -58,11 +58,11 @@
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
     </ClCompile>
     <ResourceCompile>
-      <AdditionalIncludeDirectories>..\..\..\..\..\..\Program Files (x86)\cinder_0.8.4_vc2010\include;..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\cinder_0.8.4_vc2010\include;..\..\..\..\..\..\Program Files (x86)\cinder_0.8.4_vc2010\include;..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Link>
       <AdditionalDependencies>cinder_d.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>..\..\..\..\..\..\Program Files (x86)\cinder_0.8.4_vc2010\lib;..\..\..\..\..\..\Program Files (x86)\cinder_0.8.4_vc2010\lib\msw;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\cinder_0.8.4_vc2010\lib\msw;C:\cinder_0.8.4_vc2010\lib;..\..\..\..\..\..\Program Files (x86)\cinder_0.8.4_vc2010\lib;..\..\..\..\..\..\Program Files (x86)\cinder_0.8.4_vc2010\lib\msw;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
@@ -108,7 +108,6 @@
     <ClCompile Include="komnicjcStarbucks.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\HW04StarterFiles\HW04StarterFiles\Starbucks.h" />
     <ClInclude Include="..\include\Resources.h" />
     <ClInclude Include="komnicjcStarbucks.h" />
   </ItemGroup>

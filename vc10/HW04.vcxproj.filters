@@ -29,9 +29,6 @@
     <ClInclude Include="komnicjcStarbucks.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\HW04StarterFiles\HW04StarterFiles\Starbucks.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Resources.rc">
