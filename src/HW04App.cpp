@@ -2,7 +2,6 @@
 
 #include "cinder/app/AppBasic.h"
 #include "cinder/gl/gl.h"
-#include "Starbucks.h"
 #include "komnicjcStarbucks.h"
 #include <iostream>
 #include <fstream>
@@ -20,6 +19,7 @@ class HW04App : public AppBasic {
 	void draw();
 	Entry* locations;
 	int count;
+	komnicjcStarbucks* test;
 };
 
 void HW04App::setup()
@@ -60,6 +60,10 @@ void HW04App::setup()
 		myfile.close();
 	}
 	else cout << "Unable to open file";
+
+	test = new komnicjcStarbucks();
+	test -> build(locations, count);
+	
 }
 
 void HW04App::mouseDown( MouseEvent event )
