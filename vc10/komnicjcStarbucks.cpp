@@ -2,16 +2,6 @@
 #include "komnicjcStarbucks.h"
 
 /* member variables and methods declared here */
-class komnicjcStarbucks : public Starbucks 
-{
-public:
-	virtual void build(Entry* c, int n);
-	virtual Entry* getNearest(double x, double y);
-private:
-	Node* insert(Entry* e, Node* root);
-	Tree* locations;
-};
-
 Node* komnicjcStarbucks::insert(Entry* e, Node* root)
 {
 	if(abs(e -> x - root -> data -> x) <= 0.00001)

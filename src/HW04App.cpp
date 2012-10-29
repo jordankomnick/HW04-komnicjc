@@ -60,8 +60,10 @@ void HW04App::setup()
 	}
 	else cout << "Unable to open file";
 
-	test = new komnicjcStarbucks();
-	test.build(locations, count);
+	test = new komnicjcStarbucks;
+	test -> build(locations, count);
+	Entry* result = test -> getNearest(rand(), rand());
+	cout << result;
 	
 }
 
