@@ -5,7 +5,6 @@
 #include "komnicjcStarbucks.h"
 #include <iostream>
 #include <fstream>
-#include <vector>
 
 using namespace ci;
 using namespace ci::app;
@@ -60,6 +59,9 @@ void HW04App::setup()
 		myfile.close();
 	}
 	else cout << "Unable to open file";
+
+	test = new komnicjcStarbucks();
+	test.build(locations, count);
 	
 }
 

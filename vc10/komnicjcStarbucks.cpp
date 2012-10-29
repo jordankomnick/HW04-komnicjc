@@ -1,7 +1,5 @@
-#include "Starbucks.h"
+
 #include "komnicjcStarbucks.h"
-#include "Node.h"
-#include "Tree.h"
 
 /* member variables and methods declared here */
 class komnicjcStarbucks : public Starbucks 

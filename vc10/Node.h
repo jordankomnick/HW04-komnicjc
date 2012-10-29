@@ -1,3 +1,5 @@
+#ifndef NODE_GUARD
+#define NODE_GUARD
 #include "Starbucks.h"
 
 class Node
@@ -9,3 +11,4 @@ public:
 	Node* right;
 	Node* parent;
 };
+#endif
