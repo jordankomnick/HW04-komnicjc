@@ -19,11 +19,12 @@ class HW04App : public AppBasic {
 	void update();
 	void draw();
 	Entry* locations;
+	int count;
 };
 
 void HW04App::setup()
 {
-	int count = 0;
+	count = 0;
 	string line;
 	double num;
 	ifstream myfile;
@@ -32,7 +33,8 @@ void HW04App::setup()
 	{
 		while ( myfile.good() )
 		{
-		  getline (myfile, line);
+		  getline (myfile, line, ',');
+		  getline (myfile, line, ',');
 		  count++;
 		}
 		myfile.close();
@@ -41,19 +43,19 @@ void HW04App::setup()
 
   locations = new Entry[count];
 
+  int position = 0;
   myfile.open("../include/Starbucks_2006.csv");
 	if (myfile.is_open())
 	{
 		while ( myfile.good() )
 		{
-			Entry* temp_entry = new Entry();
 		  getline (myfile, line, ',');
-		  temp_entry -> identifier = line;
-		  myfile >> temp_entry -> x;
+		  (locations+position) -> identifier = line;
+		  myfile >> (locations+position) -> x;
 		  myfile.get();
-		  myfile >> temp_entry -> y;
+		  myfile >> (locations+position) -> y;
 		  myfile.get();
-		  count++;
+		  position++;
 		}
 		myfile.close();
 	}
