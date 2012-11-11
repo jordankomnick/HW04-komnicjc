@@ -4,20 +4,41 @@
 /* member variables and methods declared here */
 Node* komnicjcStarbucks::insert(Entry* e, Node* root)
 {
+	if(e == root -> data)
+		return NULL;
 	if(abs(e -> x - root -> data -> x) <= 0.00001)
 	{
 		if(abs(e -> y - root -> data -> y) <= 0.00001)
 			return NULL;
 		else if(e -> y < root -> data -> y)
-			root -> left = insert(e, root -> left);
+		{
+			if(root -> left != NULL)
+				return insert(e, root -> left);
+			else
+				return root;
+		}
 		else
-			root -> right = insert(e, root -> right);
+		{
+			if(root -> right != NULL)
+				return insert(e, root -> right);
+			else
+				return root;
+		}
 	}
 	if(e -> x < root -> data -> x)
-		root -> left = insert(e, root -> left);
+	{
+		if(root -> left != NULL)
+			return insert(e, root -> left);
+		else
+			return root;
+	}
 	else
-		root -> right = insert(e, root -> right);
-	return root;
+	{
+		if(root -> left != NULL)
+			return insert(e, root -> left);
+		else
+			return root;
+	}
 }
 
 void komnicjcStarbucks::build(Entry* c, int n)
@@ -33,13 +54,17 @@ void komnicjcStarbucks::build(Entry* c, int n)
 	{
 		Node* to_add = new Node();
 		to_add -> data = &c[i];
-		to_add -> parent = insert(&c[i], locations -> root);
-		if(to_add -> data -> x <= to_add -> parent -> data -> x)
-			to_add -> parent -> left = to_add;
-		else
-			to_add -> parent -> right = to_add;
-		to_add -> left = NULL;
-		to_add -> right = NULL;
+		if(to_add -> parent != NULL)
+		{
+			if(i > 0)
+				to_add -> parent = insert(&c[i], locations -> root);
+			if(to_add -> data -> x <= to_add -> parent -> data -> x)
+				to_add -> parent -> left = to_add;
+			else
+				to_add -> parent -> right = to_add;
+			to_add -> left = NULL;
+			to_add -> right = NULL;
+		}
 	}
 
 }

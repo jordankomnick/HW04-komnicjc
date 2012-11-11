@@ -27,7 +27,7 @@ void HW04App::setup()
 	string line;
 	double num;
 	ifstream myfile;
-	myfile.open("../include/Starbucks_2006.csv");
+	myfile.open("../include/starbuckstest.csv");
 	if (myfile.is_open())
 	{
 		while ( myfile.good() )
@@ -36,14 +36,15 @@ void HW04App::setup()
 		  getline (myfile, line, ',');
 		  count++;
 		}
-		myfile.close();
 	}
   else cout << "Unable to open file";
 
   locations = new Entry[count];
 
+  myfile.clear();
+  myfile.seekg(0);
+
   int position = 0;
-  myfile.open("../include/Starbucks_2006.csv");
 	if (myfile.is_open())
 	{
 		while ( myfile.good() )

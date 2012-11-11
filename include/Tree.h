@@ -5,6 +5,7 @@
 class Tree
 {
 public:
+	Tree();
 	Node* root;
 };
 #endif
