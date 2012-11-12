@@ -36,7 +36,7 @@ void HW04App::setup()
 	string line;
 	double num;
 	ifstream myfile;
-	myfile.open("../include/starbuckstest.csv");
+	myfile.open("../include/Starbucks_2006.csv");
 	if (myfile.is_open())
 	{
 		while ( myfile.good() )
